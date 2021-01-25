@@ -36,8 +36,14 @@ const setLightsForChristmas = () => {
     turnLightOnOrOff(lightIds[0], true, 27306, 150, 175);
     turnLightOnOrOff(lightIds[1], true, 1, 150, 175);
 };
+
+const setLightsForValentine = () => {
+    turnLightOnOrOff(lightIds[1], true, 1, 150, 175);
+    turnLightOnOrOff(lightIds[0], true, 1, 150, 175);
+};
 module.exports = {
     turnLightsOnOrOff,
     setLightsToRandomColors,
     setLightsForChristmas,
+    setLightsForValentine,
 };

@@ -17,6 +17,7 @@
         "airtable": "^0.10.1",
         "axios": "^0.21.1",
         "dotenv": "^8.2.0",
+        "obs-websocket-js": "^4.0.2",
         "quick-chat-bot": "0.0.2"
     }
 }

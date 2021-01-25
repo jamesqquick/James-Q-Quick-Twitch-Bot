@@ -12,6 +12,7 @@ const themes = [
     'Level Up',
     'Level Up Syntax',
     'codeSTACKr Theme',
+    'HotDogStand',
 ];
 
 const setTheme = (theme) => {
