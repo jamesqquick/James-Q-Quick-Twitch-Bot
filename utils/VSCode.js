@@ -25,8 +25,17 @@ const setTheme = (theme) => {
 };
 
 const setRandomTheme = async () => {
-    const index = Math.floor(Math.random() * themes.length);
-    const theme = themes[index];
+    const currentTheme = settings['workbench.colorTheme'];
+    const currentThemeIndex = themes.indexOf(currentTheme);
+    let randomIndex = Math.floor(Math.random() * themes.length);
+
+    if (currentThemeIndex >= 0) {
+        while (currentThemeIndex === randomIndex) {
+            randomIndex = Math.floor(Math.random() * themes.length);
+        }
+    }
+
+    const theme = themes[randomIndex];
     console.log(`Setting theme to ${theme}`);
     settings['workbench.colorTheme'] = theme;
     await fs.promises.writeFile(path, JSON.stringify(settings, null, 4));
