@@ -1,5 +1,7 @@
-const { setLightsForValentine } = require('../utils/HueLights');
+const { hue, lightIds } = require('../utils/HueLights');
 
 module.exports = {
-    callback: setLightsForValentine,
+    callback: () => {
+        hue.setColors(lightIds, 'pink');
+    },
 };
