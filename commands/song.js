@@ -1,16 +1,12 @@
-const axios = require('axios');
+const { getCurrentSong } = require('jqq-stream-utils');
+
 module.exports = {
-    callback: (channel, tags, message, self, client) => {
-        axios
-            .get('https://api.pretzel.tv/playing/twitch/414520686')
-            .then((data) => {
-                console.log(data.data);
-                console.log(channel);
-                client.say(channel, data.data);
-            })
-            .catch((err) => {
-                console.error(err);
-            });
+    callback: async (channel, tags, message, self, client) => {
+        const { err, data } = await getCurrentSong();
+        console.log(err, data);
+        if (data) {
+            client.say(channel, `Currently playing - ${data}`);
+        }
     },
     globalCooldown: 30,
 };

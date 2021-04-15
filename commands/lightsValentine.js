@@ -1,4 +1,4 @@
-const { hue, lightIds } = require('../utils/HueLights');
+const { playSound, hue, lightIds } = require('jqq-stream-utils');
 
 module.exports = {
     callback: () => {
