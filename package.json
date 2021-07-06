@@ -15,7 +15,7 @@
     "license": "ISC",
     "dependencies": {
         "dotenv": "^8.2.0",
-        "jqq-stream-utils": "0.0.5",
+        "jqq-stream-utils": "^0.0.6",
         "quick-chat-bot": "0.0.2"
     }
 }
