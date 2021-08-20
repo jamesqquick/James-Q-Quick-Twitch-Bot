@@ -14,6 +14,7 @@
     "author": "",
     "license": "ISC",
     "dependencies": {
+        "axios": "^0.21.1",
         "dotenv": "^8.2.0",
         "jqq-stream-utils": "^0.0.6",
         "quick-chat-bot": "0.0.2"
